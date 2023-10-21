@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "tidy-strand-393509",
+    "private_key_id": "72f4f4effc26ad33a7283bcc5e5d9144d369a827",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC172KEw+xEsyNt\nel1IGt3rIqmR2k7QBtBy+On0cwnOtWIgbl/f2fwW5WX1BGPVVxR8LvtRjXPEOmDl\nnJjwhii5ot3zX0vaRLx9FHKutDxBzGsE0rzjVdQkeIX6KQkjV3HIEYRtORN00FaX\ny4jMXADYjWeR9MylYSiZ2rcznA51t6WK3yk4sD7y7axSgnoOYxS4QgxqF42nXIxl\nQ1OXq3iDKY06n/IYdjSgeq1RUJgmsrgULWzkPYExsX3DYRvNELpkxXRps/6j8mR2\nHzqZO1pJfrVGQFYWa/4mT51X6aLW7eAOxv/EDBJo3gTU/RuYpgaOjWohdSHuOCcG\nMLeiaJsDAgMBAAECggEAEcAvpYwUFkcM7HAlTJUXR9f6IWyvID7TjnqL7dMquf9N\nrQpeOLhk9Ye5beSl9OyDgPMSIP/WTRpaoxLag5HwKt4ht5tGcR8gINGihG2GkrwZ\nSPKV7Ikbb9kbThZvRmjdHuV1CgJCmRtNB4+blj/3v4+N8ycMr6oOGXMsfFDI9fuK\ng92K8zCXxIxRnQq1BrujC/mUS5iQm0NDkxDCp/TnqOiXVbQt3l/t22HYoKEtXlhE\nOYIrpOKtgRi0FmwuIfe2gQyZAuL1VXrBRoXfLzbvJhijs1Tk8fER2Hh5thzAiMRk\nFPpOj/6r0ivZ0RIcLGhZTzgDuWrOQHLZb6iimNrGwQKBgQDtmsmKiXgFLciCVywT\nabACw/0HluEU8A8SZ9GhGpxULTREF47yNmFh9mj1C3ve6zBV7DdRgwfhDKLJlAJK\nB5sV/KJwFqXUPT4MHy+7+QvajfthhtMxk/HDr/zBgAx2vej3hUOD5GviFYLnU7zr\nbcZr5Qhk/VkeZzK6n7fLoO4HoQKBgQDEBUDZtWlaFO0PBd7HHwYZIt7sa4AZId5P\nbyx+X2LE4XdvFF5XvZek6hdTEvPhP3KN5pceZ3t3G8z9KogCsp/o3s7qDJvURgwd\nSnyBkaXKp7gy/cFJrYxC30kz5kZEAKwO0CdxXzhTdbI3+uJG+8MJnrqXRa/I8bSw\n3bKSaLOQIwKBgQCK5nn7avGm1WTqDVvO3XHvq/M3hJSAUPX+pIJ/07af3u03AS6n\nmfLD+fDRj60SXBsdn8GW/SqV/XUMsmHENT4MVGwBarv2nvauz2xwTt8HHQlfshm0\nWfBznWX9GIYwxER0rosRh28p87la0jEW0E22tWV65EA87cdSIhyoBaQhAQKBgA6I\ngS1jCOOX55eUjNbgkvgsILEQq1exriTfjkH0WoNUYCGJNhF1Shf9DyumnRRXOuwQ\na6XicEH9eq5Oh/UDP13pnxe1RZxwcRd+3UpR/SPQWZTWQY1v45VVrry9VvpVvmv+\nvN3n/GobsNH7tOkkY2qELTtn/Ed+vDHczg+S2bVXAoGBAMcAbLLfkuPOimceNox0\n2igzxRkcbwLCgWs55QsXDVQ33byD3WILkBq5mgcEK4wFU+s78aI6FT491i16/j3H\ncREoJQ/tbKC0WLTHu/iyQ9koY0tBAhA6cm5OPREvgnstF9qJpRrSgwdJTwDxweJ7\nadXNAD1dMThR6OOFLM/2gGLk\n-----END PRIVATE KEY-----\n",
+    "client_email": "service-account-81@tidy-strand-393509.iam.gserviceaccount.com",
+    "client_id": "113139856618438333083",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account-81%40tidy-strand-393509.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com",
+    "redirect_uris":"http://localhost:3000"
+  }
