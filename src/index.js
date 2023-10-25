@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://google-doc-integration-front.onrender.com/",
+  "https://google-doc-integration-front.onrender.com",
 ];
 app.use(
   cors({
