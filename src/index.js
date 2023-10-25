@@ -8,7 +8,7 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const upload = multer({ storage: multer.memoryStorage() });
 
