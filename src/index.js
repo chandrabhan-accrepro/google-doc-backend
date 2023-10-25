@@ -20,7 +20,14 @@ const allowedOrigins = [
 ];
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: (origin, callback) => {
+      // Check if the origin is in the allowedOrigins array or if it is undefined (for local development)
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
   })
 );
 
