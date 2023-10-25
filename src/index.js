@@ -3,24 +3,13 @@ const app = express();
 const cors = require("cors");
 
 const { google } = require("googleapis");
-const { OAuth2Client } = require("google-auth-library");
-// const googleDocsApi = require("google-docs-api");
+
 const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
-const OAuth2 = google.auth.OAuth2;
 const port = 5000;
 
-// Initialize OAuth2 client (same as in previous code)
-const oauth2Client = new OAuth2(
-  "863308284109-fti6uatne7i6qgakd1apaa5dadcg51nc.apps.googleusercontent.com",
-  "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",
-  "http://localhost:3000"
-);
-
-// const storage = multer.memoryStorage(); // Store files in memory
-// const upload = multer({ storage: storage });
 const upload = multer({ storage: multer.memoryStorage() });
 
 app.use(express.json());
@@ -30,35 +19,8 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
-app.get("/auth/google", (req, res) => {
-  const authUrl = oauth2Client.generateAuthUrl({
-    access_type: "offline", // You may want to specify 'online' or 'offline' depending on your use case
-    scope: ["https://www.googleapis.com/auth/documents"], // Ensure that the scope includes Google Docs access
-  });
-
-  res.send({ authUrl });
-  // res.redirect(authUrl);
-  // console.log(authUrl);
-});
-
-app.get("/auth/google/callback", async (req, res) => {
-  const code = req.query.code;
-  console.log("hitted Request");
-  try {
-    const { tokens } = await oauth2Client.getToken(code);
-    oauth2Client.setCredentials(tokens); // Set the obtained access tokens
-    res.send("Authentication successful. You can now edit documents.");
-  } catch (error) {
-    console.error("Error during OAuth2 callback:", error);
-    res.status(500).send("Authentication failed.");
-  }
-});
 
 app.get("/create", async (req, res) => {
-  if (!oauth2Client.credentials) {
-    res.status(401).send("Authentication required.");
-    return;
-  }
   try {
     const SCOPES = ["https://www.googleapis.com/auth/drive"];
     const credentials = require("./account-key.json"); // Replace with your own credentials file
@@ -103,17 +65,8 @@ app.get("/create", async (req, res) => {
 
 // Convert and edit the uploaded document
 app.post("/editDocument", upload.single("file"), async (req, res) => {
-  if (!oauth2Client.credentials) {
-    res.status(401).send("Authentication required.");
-    return;
-  }
   console.log("Authent");
   try {
-    const auth = oauth2Client;
-    const docs = google.docs({ version: "v1", auth });
-
-    // Read the uploaded file (assuming it's a Word document)
-    // const uploadedFile = req.body.file;
     const uploadedFile = req?.file?.buffer;
     const pathOfFile = {};
     if (uploadedFile) {
@@ -212,13 +165,9 @@ app.post("/editDocument", upload.single("file"), async (req, res) => {
 
 app.get("/savedoc", async (req, res) => {
   console.log("saved data");
-  if (!oauth2Client.credentials) {
-    console.log("Authenticated");
-    res.status(401).send("Authentication required.");
-    return;
-  }
+
   try {
-    const auth = oauth2Client;
+    // const auth = oauth2Client;
     console.log("documentID", req.query.fileId);
 
     console.log("Path of key: ", path.join(__dirname, "account-key.json"));
